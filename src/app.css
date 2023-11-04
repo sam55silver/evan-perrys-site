@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+	font-family: "DM Serif Display";
+	src: url('/fonts/DMSerifDisplay-Regular.ttf');
+}
+
+@font-face {
+	font-family: "DM Serif Text";
+	src: url('/fonts/DMSerifText-Regular.ttf');
+}
+
+body {
+	font-family: "DM Serif Text";
+	@apply text-gray-700 bg-slate-50;
+}
+
+h1 {
+	font-family: "DM Serif Display";
+}
+h2 {
+	font-family: "DM Serif Display";
+}
+h3 {
+	font-family: "DM Serif Display";
+}
