@@ -1,5 +1,5 @@
 <script>
-	import Forest from '$lib/assets/images/forest.jpg'
+	import Van from '$lib/assets/images/van.jpg'
 	import ImageCard from '$lib/components/imageCard.svelte'
 	import { onMount } from 'svelte'
 
@@ -10,9 +10,9 @@
 </script>
 
 <ImageCard 
-	title="Walk in the Woods" 
-	description="Sir Donald strolling through the woods" 
+	title="Dudes and a Van" 
+	description="Driving a van and chilling" 
 	imgWidth={imgWidth}
-	imgSrc={Forest}
+	imgSrc={Van}
 />
 

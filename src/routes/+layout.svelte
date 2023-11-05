@@ -16,7 +16,9 @@
 	
 	<div class="flex justify-between items-center">
 		<LeftArrow />
-		<slot />
+		<div class="flex flex-col items-center p-6 text-center">
+			<slot />
+		</div>
 		<RightArrow />
 	</div>
 
