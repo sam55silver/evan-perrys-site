@@ -14,7 +14,7 @@
 	</div>
 
 	
-	<div class="flex items-center">
+	<div class="flex justify-between items-center">
 		<LeftArrow />
 		<slot />
 		<RightArrow />
@@ -24,13 +24,13 @@
 	<nav>
 		<HorizontalLine />
 		<div class="mt-4 flex justify-center gap-4 w-full">
-			<a>Home</a>
-			<a>Forest</a>
-			<a>Cottage</a>
-			<a>Beach</a>
-			<a>Lighthouse</a>
-			<a>Van</a>
-			<a>Contact</a>
+			<a href="/">Home</a>
+			<a href="/forest">Forest</a>
+			<a href="/cottage">Cottage</a>
+			<a href="/beach">Beach</a>
+			<a href="/lighthouse">Lighthouse</a>
+			<a href="/van">Van</a>
+			<a href="/contact">Contact</a>
 		</div>
 	</nav>
 </main>
