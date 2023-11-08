@@ -1,12 +1,13 @@
 <script>
-	export let imgWidth;
+	export let byWidth;
 	export let imgSrc;
 	export let title;
 	export let description;
+
 </script>
 
 
-<img width={imgWidth} src={imgSrc} alt={description} />
+<img class="{byWidth ? 'w-full' : 'w-auto h-full'}" src={imgSrc} alt={description} />
 <div class="mt-6">
 	<h2 class="text-xl font-bold">{title}</h2>
 	<p>

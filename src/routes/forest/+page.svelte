@@ -12,7 +12,7 @@
 <ImageCard 
 	title="Walk in the Woods" 
 	description="Sir Donald strolling through the woods" 
-	imgWidth={imgWidth}
+	byWidth={false}
 	imgSrc={Forest}
 />
 
