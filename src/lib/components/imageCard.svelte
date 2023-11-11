@@ -6,7 +6,7 @@
 </script>
 
 <div class="flex flex-col items-center justify-center h-full">
-	<img class="{ byWidth ? 'w-full h-auto' : 'h-[75%] w-auto'}" src={imgSrc} alt={description} />
+	<img class="{ byWidth ? 'w-full max-w-screen-md h-auto' : 'h-[75%] w-auto'}" src={imgSrc} alt={description} />
 	<div class="mt-4 text-center">
 		<h2>{title}</h2>
 		<p class="text-sm mb-1">
