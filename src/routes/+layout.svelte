@@ -3,9 +3,33 @@
 	import RightArrow from "$lib/components/right-arrow.svelte"
 	import LeftArrow from "$lib/components/left-arrow.svelte"
 	import HorizontalLine from "$lib/components/horizontal-line.svelte"
+
+	const navList = ["/", "/forest", "/cottage", "/beach", "/lighthouse", "/van", "/contact"]
+
+	const next = () => {
+		const curr = window.location.pathname
+		const index = navList.indexOf(curr)
+
+		if (index == navList.length - 1) {
+			window.location.href = navList[0]
+		} else {
+			window.location.href = navList[index + 1]
+		}
+	}
+
+	const prev = () => {
+		const curr = window.location.pathname
+		const index = navList.indexOf(curr)
+
+		if (index == 0) {
+			window.location.href = navList[-1]
+		} else {
+			window.location.href = navList[index - 1]
+		}
+	}
 </script>
 
-<main class="flex flex-col justify-between h-screen px-4 py-8">
+<main class="flex flex-col justify-between h-screen p-4">
 	<div>
 		<h1 class="mb-4 w-full text-center text-2xl font-bold">
 			Evan Perry
@@ -14,12 +38,10 @@
 	</div>
 
 	
-	<div class="flex justify-between items-center">
-		<LeftArrow />
-		<div class="flex flex-col items-center p-6 text-center">
-			<slot />
-		</div>
-		<RightArrow />
+	<div class="flex justify-between gap-6 h-full items-center">
+		<LeftArrow func={prev}/>
+		<slot />
+		<RightArrow func={next}/>
 	</div>
 
 

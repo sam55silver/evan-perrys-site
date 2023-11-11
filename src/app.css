@@ -13,7 +13,7 @@
 }
 
 body {
-	font-family: "DM Serif Text";
+	font-family: "Times New Roman";
 	@apply text-gray-700 bg-slate-50;
 }
 

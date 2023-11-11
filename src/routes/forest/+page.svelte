@@ -1,12 +1,6 @@
 <script>
 	import Forest from '$lib/assets/images/forest.jpg'
 	import ImageCard from '$lib/components/imageCard.svelte'
-	import { onMount } from 'svelte'
-
-	let imgWidth = 300
-	onMount(() => {
-		imgWidth = window.innerWidth * 3 / 5
-	})
 </script>
 
 <ImageCard 
@@ -15,4 +9,3 @@
 	byWidth={false}
 	imgSrc={Forest}
 />
-
