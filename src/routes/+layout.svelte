@@ -38,7 +38,7 @@
 	</div>
 
 	
-	<div class="flex justify-between gap-6 h-full items-center">
+	<div class="flex max-w-screen-lg w-full self-center justify-between gap-6 h-full items-center">
 		<LeftArrow func={prev}/>
 		<slot />
 		<RightArrow func={next}/>
