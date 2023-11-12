@@ -3,10 +3,5 @@
 	import ImageCard from '$lib/components/imageCard.svelte'
 </script>
 
-<ImageCard 
-	title="Dudes and a Van" 
-	description="Driving a van and chilling" 
-	byWidth={true}
-	imgSrc={Van}
-/>
+<ImageCard byWidth={true} imgSrc={Van} title="Dudes and a van" />
 
