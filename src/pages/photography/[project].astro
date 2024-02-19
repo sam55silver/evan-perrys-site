@@ -1,0 +1,11 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const { project } = Astro.params;
+if (project == undefined) {
+	return { status: 404 };
+}
+---
+
+<Layout title="{project}">
+	<h1>About { project }</h1>
+</Layout>
