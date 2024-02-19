@@ -8,7 +8,9 @@ const photos = await getCollection('photography')
 <Layout title="Photography">
 	<div class="flex flex-col gap-6">
 		{photos.map((photo) => (
-			<img src={photo.data.cover} alt={photo.data.title} />
+			<a href={"/photography/" + photo.id}>
+				<img src={photo.data.cover} alt={photo.data.title} />
+			</a>
 		))}
 	</div>
 </Layout>

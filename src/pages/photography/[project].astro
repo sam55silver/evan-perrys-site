@@ -1,11 +1,17 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import { getEntry } from 'astro:content'
 const { project } = Astro.params;
 if (project == undefined) {
+	return { status: 404 };
+}
+
+const photo = await getEntry('photography', project);
+if (photo == undefined) {
 	return { status: 404 };
 }
 ---
 
 <Layout title="{project}">
-	<h1>About { project }</h1>
+	<img src={photo.data.cover} alt={photo.data.title} />
 </Layout>
