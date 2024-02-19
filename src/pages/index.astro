@@ -3,26 +3,26 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="About" nav="about">
-	<div class="flex gap-8 justify-center items-center">
+	<div class="flex gap-8 justify-center items-center flex-col md:flex-row8">
 		<img 
 			src="https://assets.samsilver.ca/evan-perry/evan.jpg" 
 			alt="Portrait of Evan Perry"
-			class="object-cover h-[34rem] w-96"
+			class="object-cover h-[28rem] w-fit"
 		/>
-		<div class="text-lg">
-			<h3 class="text-xl font-bold">Hi, I'm Evan Perry.</h3>
+		<div class="text-md">
+			<h3 class="text-lg font-bold">Hi, I'm Evan Perry.</h3>
 			<p>I am a Geolgist from Nova Scotia, Canda.</p>
-			<p>Currently I am getting my GSI degree at NSCC</p>
-			<p class="mt-5">I do a lot of things, checkout my stuff:</p>
-			<div class="flex flex-col mt-2">
+			<p>Currently I am getting my GSI degree at NSCC.</p>
+			<p class="mt-4">I do a lot of things, checkout my stuff:</p>
+			<div class="flex flex-col">
 				<a href="/documentary" class="stuff">Documentary</a>
 				<a class="stuff">Photography</a>
 			</div>
 		</div>
 	</div>
-	<div class="mt-20 max-w-screen-md mx-auto text-lg">
+	<div class="mt-10 max-w-screen-md mx-auto text-lg">
 		<h3 class="text-xl font-bold mt-10">Contact Me</h3>
-		<div class="flex w-full gap-8">
+		<div class="flex flex-col w-full gap-2">
 			<div class="w-full">
 				<label for="name" class="block mt-2">Name</label>
 				<input type="text" id="name" class="contact-input" />
@@ -34,13 +34,13 @@ import Layout from '../layouts/Layout.astro';
 		</div>
 		<label for="message" class="block mt-2">Message</label>
 		<textarea id="message" class="contact-input"></textarea>
-		<button class="mt-4 bg-blue-500 text-white p-2 rounded-none w-44">Send</button>
+		<button class="stuff w-full">Send</button>
 	</div>
 </Layout>
 
 <style>
 	.stuff {
-		@apply mt-5 bg-blue-500 text-white p-2 text-center rounded-none;
+		@apply mt-4 bg-slate-600 text-white p-2 text-center rounded-none;
 	}
 
 	.contact-input {
