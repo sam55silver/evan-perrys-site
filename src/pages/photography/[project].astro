@@ -1,5 +1,5 @@
 ---
-import Layout from '../../layouts/Layout.astro';
+import CommonBase from '../../layouts/CommonBase.astro';
 import { getEntry } from 'astro:content'
 const { project } = Astro.params;
 if (project == undefined) {
@@ -12,6 +12,19 @@ if (photo == undefined) {
 }
 ---
 
-<Layout title="{project}">
-	<img src={photo.data.cover} alt={photo.data.title} />
-</Layout>
+
+<CommonBase title="zoom">
+	<img 
+		transition:animate="fade"
+		src={photo.data.cover} 
+		alt={photo.data.title}
+		class="w-full"
+	/>
+	<div class="text-center w-full mt-6" transition:animate="fade">
+		<h1 class="text-xl font-bold">{photo.data.title}</h1>
+		<p class="text-md mt-2">{photo.data.description}</p>
+	</div>
+	<a href="/photography" class="pointer text-orange-600 underline mt-6 block">
+		Back
+	</a>
+</CommonBase>
