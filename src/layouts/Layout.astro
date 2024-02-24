@@ -10,18 +10,18 @@ const { title } = Astro.props;
 
 ---
 <CommonBase title={title}>
-	<nav>
-		<h1 class="w-full mb-4 text-center text-2xl font-bold">
-			Evan Perry
+	<nav class="w-full">
+		<h1 class="w-full mb-2 text-center text-2xl font-bold">
+			<a href="/about">Evan Perry</a>
 		</h1>
-		<hr class="mx-auto max-w-screen-md border-0 rounded bg-gray-600 h-0.5">
+		<hr class="w-full border-0 rounded bg-gray-600 h-0.5">
 		<div class="w-full flex justify-center gap-6 mt-2">
 			<a href="/">Photography</a>
 			<a href="/documentary">Documentary</a>
 			<a href="/about">About</a>
 		</div>
 	</nav>
-	<main class="container mx-auto mt-8" transition:animate="fade">
+	<main class=" mt-8" transition:animate="fade">
 		<slot />
 	</main>
 	<footer class="w-full h-full flex justify-center items-end text-sm pt-8 mt-auto">
