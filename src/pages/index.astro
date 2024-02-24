@@ -1,49 +1,16 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content'
+
+const photos = await getCollection('photography')
 ---
 
-<Layout title="About">
-	<div class="flex gap-8 justify-center items-center flex-col md:flex-row">
-		<img 
-			src="https://assets.samsilver.ca/evan-perry/evan.jpg" 
-			alt="Portrait of Evan Perry"
-			class="object-cover h-[28rem] w-fit"
-		/>
-		<div class="text-md">
-			<h3 class="text-lg font-bold">Hi, I'm Evan Perry.</h3>
-			<p>I am a Geolgist from Nova Scotia, Canda.</p>
-			<p>Currently I am getting my GSI degree at NSCC.</p>
-			<p class="mt-4">I do a lot of things, checkout my stuff:</p>
-			<div class="flex flex-col">
-				<a href="/documentary" class="stuff">Documentary</a>
-				<a href="/photography" class="stuff">Photography</a>
-			</div>
-		</div>
-	</div>
-	<div class="mt-10 max-w-screen-md mx-auto text-lg">
-		<h3 class="text-xl font-bold mt-10">Contact Me</h3>
-		<div class="flex flex-col w-full gap-2">
-			<div class="w-full">
-				<label for="name" class="block mt-2">Name</label>
-				<input type="text" id="name" class="contact-input" />
-			</div>
-			<div class="w-full">
-				<label for="email" class="block mt-2">Email</label>
-				<input type="email" id="email" class="contact-input" />
-			</div>
-		</div>
-		<label for="message" class="block mt-2">Message</label>
-		<textarea id="message" class="contact-input"></textarea>
-		<button class="stuff w-full">Send</button>
+<Layout title="Photography">
+	<div class="flex flex-col gap-6">
+		{photos.map((photo) => (
+			<a href={"/photography/" + photo.id}>
+				<img src={photo.data.cover} alt={photo.data.title} />
+			</a>
+		))}
 	</div>
 </Layout>
-
-<style>
-	.stuff {
-		@apply mt-4 bg-slate-600 text-white p-2 text-center rounded-none;
-	}
-
-	.contact-input {
-		@apply w-full border-2 border-gray-300 rounded-md p-2 rounded-none;
-	}
-</style>
