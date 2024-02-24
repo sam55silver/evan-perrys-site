@@ -3,9 +3,10 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Documentary">
-	<div class="flex flex-col items-center text-center">
+	<div id="container" class="flex flex-col items-center text-center w-full">
 		<iframe
-			class="object-cover h-44"
+			id="vid"
+			class="w-full aspect-video"
 			src="https://www.youtube.com/embed/eblw6X22_m4"
 			allowfullscreen
 		>
@@ -14,7 +15,7 @@ import Layout from '../layouts/Layout.astro';
 			<h2 class="text-lg font-bold">Where the Waters Meet</h2>
 			<p class="mt-2">A documentry about an epic tale.</p> 
 			<p>A fight between locals, a disbute for the ages.</p>
-			<p class="mt-4">Created By Doanld Jeweks and Myself.</p> 
+		<p class="mt-4">Created By Doanld Jeweks and Myself.</p> 
 		</div>
 	</div>
 </Layout>
