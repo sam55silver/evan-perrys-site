@@ -3,11 +3,23 @@ import Layout from '../layouts/Layout.astro';
 import { getCollection } from 'astro:content'
 
 const photos = await getCollection('photography')
+const nonPortrait = photos.filter((photo) => !photo.data.isPortrait)
+const portrait = photos.filter((photo) => photo.data.isPortrait)
 ---
 
 <Layout title="Photography">
 	<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
-		{photos.map((photo) => (
+		{nonPortrait
+			.map((photo) => (
+			<div>
+				<a href={"/photography/" + photo.id}>
+					<img src={photo.data.cover} alt={photo.data.title} />
+				</a>
+			</div>
+		))}
+	</div>
+	<div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
+		{portrait.map((photo) => (
 			<div>
 				<a href={"/photography/" + photo.id}>
 					<img src={photo.data.cover} alt={photo.data.title} />
