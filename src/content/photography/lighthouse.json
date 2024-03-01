@@ -1,5 +1,6 @@
 {
 	"title": "Dune Sentry",
 	"description": "A quaint lighthouse stands guard atop a sandy dune, framed by wispy beach grass and a soft sky.",
-	"cover": "https://assets.samsilver.ca/evan-perry/lighthouse.jpg"
+	"cover": "https://assets.samsilver.ca/evan-perry/lighthouse.jpg",
+	"isPortrait": false
 }

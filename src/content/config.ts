@@ -6,6 +6,7 @@ const photographyCollection = defineCollection({
 		title: z.string(),
 		description: z.string(),
 		cover: z.string(),
+		isPortrait: z.boolean()
 	}),	
 });
 

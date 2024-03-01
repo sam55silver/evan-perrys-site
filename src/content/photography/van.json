@@ -1,5 +1,6 @@
 {
 	"title": "The Beast",
 	"description": "Two brothers ready for adventure beside their camper van, set against a backdrop of lush forest.",
-	"cover": "https://assets.samsilver.ca/evan-perry/van.jpg"
+	"cover": "https://assets.samsilver.ca/evan-perry/van.jpg",
+	"isPortrait": false
 }

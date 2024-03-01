@@ -14,17 +14,19 @@ if (photo == undefined) {
 
 
 <CommonBase title="zoom">
-	<img 
-		transition:animate="fade"
-		src={photo.data.cover} 
-		alt={photo.data.title}
-		class="w-full"
-	/>
-	<div class="text-center w-full mt-6" transition:animate="fade">
-		<h1 class="text-xl font-bold">{photo.data.title}</h1>
-		<p class="text-md mt-2">{photo.data.description}</p>
+	<div class="h-[90vh] flex flex-col gap-4 justify-center items-center">
+		<img 
+			transition:animate="fade"
+			src={photo.data.cover} 
+			alt={photo.data.title}
+			class={photo.data.isPortrait ? "h-full" : "w-full"}
+		/>
+		<div class="text-center w-full mt-10" transition:animate="fade">
+			<h1 class="text-xl font-bold">{photo.data.title}</h1>
+			<p class="text-md mt-2">{photo.data.description}</p>
+		</div>
+		<a href="/" class="text-xl pointer text-orange-600 underline block">
+			Back
+		</a>
 	</div>
-	<a href="/" class="pointer text-orange-600 underline mt-6 block">
-		Back
-	</a>
 </CommonBase>

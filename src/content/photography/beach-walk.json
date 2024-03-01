@@ -1,5 +1,6 @@
 {
 	"title": "Silent Reflection",
 	"description": "A lone person stands on a beach, their reflection in the wet sand under a cloudy sky, conveying a moment of quiet thought.",
-	"cover": "https://assets.samsilver.ca/evan-perry/beach-walk.jpg"
+	"cover": "https://assets.samsilver.ca/evan-perry/beach-walk.jpg",
+	"isPortrait": true
 }

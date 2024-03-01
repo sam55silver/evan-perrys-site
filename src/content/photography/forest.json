@@ -1,5 +1,6 @@
 {
 	"title": "Forest Trail",
 	"description": "A hiker traverses a sun-dappled path through towering trees",
-	"cover": "https://assets.samsilver.ca/evan-perry/forest.jpg"
+	"cover": "https://assets.samsilver.ca/evan-perry/forest.jpg",
+	"isPortrait": true
 }
