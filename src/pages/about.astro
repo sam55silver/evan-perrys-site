@@ -3,18 +3,32 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="About">
-	<div class="mx-auto flex gap-8 md:gap-14 max-w-screen-md justify-center items-center flex-col md:flex-row">
-		<img 
-			src="https://assets.samsilver.ca/evan-perry/evan.jpg" 
-			alt="Portrait of Evan Perry"
-			class="object-cover h-[28rem] md:w-1/2"
-		/>
-		<div class="text-md md:w-1/3">
-			<h3 class="text-lg font-bold mb-4">Hi, I'm Evan Perry.</h3>
-			<p>I am a Geolgist from Nova Scotia, Canda. Currently I am getting my GSI degree at NSCC.</p>
+	<!-- <div class="mx-auto flex gap-8 md:gap-14 max-w-screen-md justify-center items-center flex-col md:flex-row"> -->
+	<!-- 	<img  -->
+	<!-- 		src="https://assets.samsilver.ca/evan-perry/evan.jpg"  -->
+	<!-- 		alt="Portrait of Evan Perry" -->
+	<!-- 		class="object-cover h-[28rem] md:w-1/2" -->
+	<!-- 	/> -->
+	<!-- 	<div class="text-md md:w-1/3"> -->
+	<!-- 		<h3 class="text-lg font-bold mb-4">Hi, I'm Evan Perry.</h3> -->
+	<!-- 		<p>I am a Geolgist from Nova Scotia, Canda. Currently I am getting my GSI degree at NSCC.</p> -->
+	<!-- 	</div> -->
+	<!-- </div> -->
+	<div class="w-full flex justify-center items-center">
+		<div class="max-w-screen-md grid grid-cols-3 items-center gap-8">
+			<img
+				src="https://assets.samsilver.ca/evan-perry/evan.jpg"
+	 			alt="Portrait of Evan Perry"
+				class="w-fit col-span-2 object-cover h-[28rem]"
+			/>
+			<div>
+				<h3 class="text-lg font-bold mb-4">Hi, I'm Evan Perry.</h3>
+				<p>I am a Geolgist from Nova Scotia, Canda. Currently I am getting my GSI degree at NSCC.</p>
+			</div>
 		</div>
+		
 	</div>
-	<div class="mt-10 max-w-screen-md mx-auto text-lg">
+	<div class="mt-20 max-w-screen-md mx-auto text-lg">
 		<h3 class="text-xl font-bold mt-10">Contact Me</h3>
 		<div class="flex flex-col w-full gap-2">
 			<div class="w-full">
