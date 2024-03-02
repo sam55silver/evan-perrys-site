@@ -10,6 +10,10 @@ const photo = await getEntry('photography', project);
 if (photo == undefined) {
 	return { status: 404 };
 }
+
+const getImageClass = (isPortrait) => {
+	return (photo.data.isPortrait ? "h-full" : "w-full") + " mt-10"
+}
 ---
 
 
@@ -19,7 +23,7 @@ if (photo == undefined) {
 			transition:animate="fade"
 			src={photo.data.cover} 
 			alt={photo.data.title}
-			class={photo.data.isPortrait ? "h-full" : "w-full"}
+			class={getImageClass(photo.data.isPortrait)}
 		/>
 		<div class="text-center max-w-screen-sm mt-8" transition:animate="fade">
 			<h1 class="text-2xl font-bold">{photo.data.title}</h1>
