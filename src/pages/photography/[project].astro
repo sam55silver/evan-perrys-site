@@ -12,24 +12,24 @@ if (photo == undefined) {
 }
 
 const getImageClass = (isPortrait) => {
-	return (photo.data.isPortrait ? "h-full" : "w-full") + " mt-10"
+	return (isPortrait ? "h-full object-contain" : "w-fit") + " mt-6"
 }
 ---
 
 
 <CommonBase title="zoom">
-	<div class="h-[90vh] flex flex-col gap-10 justify-center items-center">
+	<div class="h-[90svh] flex flex-col gap-2 md:gap-10 justify-center items-center">
 		<img 
 			transition:animate="fade"
 			src={photo.data.cover} 
 			alt={photo.data.title}
 			class={getImageClass(photo.data.isPortrait)}
 		/>
-		<div class="text-center max-w-screen-sm mt-8" transition:animate="fade">
-			<h1 class="text-2xl font-bold">{photo.data.title}</h1>
-			<p class="text-lg mt-2">{photo.data.description}</p>
+		<div class="text-center max-w-screen-sm mt-4" transition:animate="fade">
+			<h1 class="text-md md:text-2xl font-bold">{photo.data.title}</h1>
+			<p class="text-sm md:text-lg mt-2">{photo.data.description}</p>
 		</div>
-		<a href="/" class="text-xl pointer text-orange-600 underline block">
+		<a href="/" class="mt-4 text-md md:text-xl pointer text-orange-600 underline block">
 			Back
 		</a>
 	</div>
