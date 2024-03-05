@@ -10,7 +10,7 @@ if (photo == undefined) {
 	return { status: 404 };
 }
 
-const getImageClass = (isPortrait: bool): string => {
+const getImageClass = (isPortrait: boolean): string => {
 	return (isPortrait ? "h-[55svh] object-contain" : "w-full lg:max-w-screen-lg")
 }
 ---
