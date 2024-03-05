@@ -3,7 +3,7 @@ services:
   evan:
     build: .
     ports:
-      - "5555:5555"
+      - "5555:3000"
     labels:
       - "traefik.http.routers.evan.tls=true"
       - "traefik.http.routers.evan.rule=Host(`evan.samsilver.ca`)"
