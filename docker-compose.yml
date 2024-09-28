@@ -11,5 +11,6 @@ services:
     labels:
       - "traefik.http.routers.evan.tls=true"
       - "traefik.http.routers.evan.rule=Host(`evan.samsilver.ca`)"
-    networks: web
+    networks: 
+      - web
 
