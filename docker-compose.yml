@@ -1,10 +1,15 @@
-version: '3'
+networks:
+  web:
+    external: true
+
 services:
   evan:
     build: .
+    restart: always
     ports:
       - "5555:3000"
     labels:
       - "traefik.http.routers.evan.tls=true"
       - "traefik.http.routers.evan.rule=Host(`evan.samsilver.ca`)"
-    network_mode: bridge
+    networks: web
+
